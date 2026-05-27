@@ -1,0 +1,55 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#EAF4FF">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sistema de Chamados"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#0A3D62"
+        android:layout_marginBottom="16dp"/>
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:singleSelection="false">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipTodos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Todos"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipAberto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aberto"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipAndamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Em andamento"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipConcluido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Concluído"/>
+    </com.google.android.material.chip.ChipGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerChamados"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>
